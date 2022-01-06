@@ -1,0 +1,12 @@
+# Disable the "core" mssql plugins
+disablePlugins:
+  - lando-mssql
+
+# Make sure we are dogfooding this plugin for testing purposes
+plugins:
+  "@lando/mssql": /home/runner/work/mssql/mssql
+
+# Disable metrics reporting
+stats:
+  - report: false
+    url: https://metrics.lando.dev
