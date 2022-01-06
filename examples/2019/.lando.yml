@@ -1,0 +1,4 @@
+name: lando-mssql-2019
+services:
+  defaults:
+    type: mssql:2019-latest
