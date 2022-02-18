@@ -1,26 +1,9 @@
 ---
-description: Add a highly configurable Microsoft MSSQL service to Lando for local development with all the power of Docker and Docker Compose.
+title: Configuration
+description: Learn how to configure the Lando MSSQL service.
 ---
 
-# MSSQL
-
-[MSSQL](https://www.microsoft.com/en-us/sql-server/sql-server-2016) lets you build intelligent, mission-critical applications using a scalable, hybrid database platform that has everything built-in from in-memory performance and advanced security to in-database analytics.
-
-You can easily add it to your Lando app by adding an entry to the [services](https://docs.lando.dev/config/services.html) top-level config in your [Landofile](https://docs.lando.dev/config/lando.html).
-
-[[toc]]
-
-## Supported versions
-
-*   [2019-latest](https://hub.docker.com/_/microsoft-mssql-server)
-*   **[2017-latest](https://hub.docker.com/_/microsoft-mssql-server)** **(default)**
-*   [custom](https://docs.lando.dev/config/services.html#advanced)
-
-## Patch versions
-
-This service does not support patch versions but if you **really** need something like that, you could consider using either a [custom compose service](./compose.html) or a service [overrides](https://docs.lando.dev/config/services.html#overrides).
-
-## Configuration
+# Configuration
 
 Here are the configuration options, set to the default values, for this service. If you are unsure about where this goes or what this means, we *highly recommend* scanning the [services documentation](https://docs.lando.dev/config/services.html) to get a good handle on how the magicks work.
 
@@ -44,7 +27,7 @@ services:
       password: he11oTHERE
 ```
 
-### Port forwarding
+## Port forwarding
 
 `portforward` will allow you to access this service externally by assigning a port directly on your host's `localhost`. Note that ` portforward` can be set to either `true` or a specific `port` but we *highly recommend* you set it to `true` unless you have pretty good knowledge of how port assignment works or you have a **very** compelling reason for needing a locked down port.
 
@@ -70,7 +53,7 @@ services:
     portforward: 1433
 ```
 
-### Setting custom credentials
+## Setting custom credentials
 
 You can also configure the default `password` for the `sa` user. However, it is *very important* to note that these things get set the **FIRST TIME YOU START** the service and **ONLY THE FIRST TIME.**
 
@@ -92,4 +75,33 @@ lando destroy -y && lando start
 
 You can get connection and credential information about your mssql instance by running [`lando info`](https://docs.lando.dev/cli/info.html). It may also be worth checking out our [accessing services externally guide](https://docs.lando.dev/guides/external-access.html).
 
-<RelatedGuides tag="Databases"/>
+## Adding tooling commands
+
+By default a service will not do any tooling routing for you but you can add helpful `lando` commands.
+
+```yaml
+tooling:
+  donet:
+    service: myservice
+```
+
+You can then invoke them on the command line.
+
+```bash
+lando dotnet
+```
+
+Lando tooling is actually pretty powerful so definitely check out [the rest](https://docs.lando.dev/config/tooling.html) of its cool features.
+
+## Adding routing
+
+By default a service will not do any proxy routing for you but you can add your own.
+
+```yaml
+proxy:
+  myservice:
+    - myapp.lndo.site
+    - something.else.local
+```
+
+Lando proxying is actually pretty powerful so definitely check out [the rest](https://docs.lando.dev/config/proxy.html) of its cool features.
