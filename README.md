@@ -1,65 +1,38 @@
 # Lando MSSQL Plugin
 
-The Lando MSSQL plugin service.
+This is the _official_ [Lando](https://lando.dev) plugin for [MSSQL](https://www.microsoft.com/en-us/sql-server/sql-server-2016). When installed it...
 
-## Installation
+* Allows users to run various `mssql` versions
 
-```bash
-# With npm
-npm install @lando/mssql
+Of course, once a user is running their MSSQL project with Lando they can take advantage of [all the other awesome development features](https://docs.lando.dev) Lando provides.
 
-# With yarn
-yarn add @lando/mssql
+## Basic Usage
+
+Add a `mssql` service to your Landofile
+
+```yaml
+services:
+  myservice:
+    type: mssql
 ```
+
+For more info you should check out the [docs](https://docs.lando.dev/mssql):
+
+* [Getting Started](https://docs.lando.dev/mssql/)
+* [Configuration](https://docs.lando.dev/mssql/config.html)
+* [Guides](https://docs.lando.dev/mssql/accessing-logs.html)
+* [Examples](https://github.com/lando/mssql/tree/main/examples)
+* [Development](https://docs.lando.dev/mssql/development.html)
 
 ## Issues, Questions and Support
 
-If you have a question or would like some community support we recommend you [join us on Slack](https://launchpass.com/devwithlando). Note that this is the Slack community for [Lando](https://lando.dev) but we are more than happy to help with this module as well!
+If you have a question or would like some community support we recommend you [join us on Slack](https://launchpass.com/devwithlando).
 
 If you'd like to report a bug or submit a feature request then please [use the issue queue](https://github.com/lando/mssql/issues/new/choose) in this repo.
 
 ## Changelog
 
 We try to log all changes big and small in both [THE CHANGELOG](https://github.com/lando/mssql/blob/main/CHANGELOG.md) and the [release notes](https://github.com/lando/mssql/releases).
-
-
-## Development
-
-* Requires [Node 14+](https://nodejs.org/dist/latest-v14.x/)
-* Prefers [Yarn](https://classic.yarnpkg.com/lang/en/docs/install)
-
-```bash
-git clone https://github.com/lando/mssql.git && cd mssql
-yarn install
-```
-
-If you dont' want to install Node 14 or Yarn for whatever reason you can install [Lando](https://docs.lando.dev/basics/installation.html) and use that:
-
-```bash
-git clone https://github.com/lando/mssql.git && cd mssql
-# Install deps and get node
-lando start
-
-# Run commands
-lando node
-lando yarn
-```
-
-## Testing
-
-```bash
-# Lint the code
-yarn lint
-
-# Run unit tests
-yarn test
-```
-
-## Releasing
-
-```bash
-yarn release
-```
 
 ## Contributors
 
@@ -69,6 +42,7 @@ yarn release
 
 Made with [contributors-img](https://contrib.rocks).
 
-## Other Resources
+## Other Selected Resources
 
-* [Important advice](https://www.youtube.com/watch?v=WA4iX5D9Z64)
+* [LICENSE](https://github.com/lando/mssql/blob/main/LICENSE.md)
+* [The best professional advice ever](https://www.youtube.com/watch?v=tkBVDh7my9Q)
