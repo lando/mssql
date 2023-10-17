@@ -38,6 +38,7 @@ module.exports = {
           SA_PASSWORD: options.creds.password,
         },
       };
+      options.healthcheck = `sqlcmd -U ${options.creds.user} -H ${options.name} -P ${options.creds.password} -Q quit`;
       // Send it downstream
       super(id, options, {services: _.set({}, options.name, mssql)});
     };
