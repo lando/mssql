@@ -28,6 +28,9 @@ module.exports = {
   builder: (parent, config) => class LandoMsSql extends parent {
     constructor(id, options = {}) {
       options = _.merge({}, config, options);
+
+      if (!options.healthcheck) options.healthcheck = require('../utils/get-default-healthcheck')(options);
+
       // Build the default stuff here
       const mssql = {
         image: 'mcr.microsoft.com/mssql/server',
@@ -38,7 +41,6 @@ module.exports = {
           SA_PASSWORD: options.creds.password,
         },
       };
-      options.healthcheck = `sqlcmd -U ${options.creds.user} -H ${options.name} -P ${options.creds.password} -Q quit`;
       // Send it downstream
       super(id, options, {services: _.set({}, options.name, mssql)});
     };
