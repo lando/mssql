@@ -22,6 +22,10 @@ services:
 *   **[2017-latest](https://hub.docker.com/_/microsoft-mssql-server)** **(default)**
 *   [custom](https://docs.lando.dev/config/services.html#advanced)
 
+::: warning ARM-Chip Macs Require Rosetta Emulation!
+There is a bug in the image when emulated by M1 (or other ARM-chip) Macs. Until Microsoft releases an ARM-native version of the image, you should turn on the setting "Use Rosetta for x86/amd64 emulation on Apple Silicon" in the "Features in Development" section of your Docker Desktop settings.
+:::
+
 ## Patch versions
 
 This service does not support patch versions but if you **really** need something like that, you could consider using either a [custom compose service](https://docs.lando.dev/compose) or a service [overrides](https://docs.lando.dev/config/services.html#overrides).
