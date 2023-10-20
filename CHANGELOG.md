@@ -1,3 +1,8 @@
+## v0.9.0 - [October 20, 2023](https://github.com/lando/mssql/releases/tag/v0.9.0)
+* Added a new healthcheck that better assesses service readiness. [#23](https://github.com/lando/mssql/pull/23)
+* Restructured to use builders/postgres.js.
+
+
 ## v0.8.0 - [July 3, 2023](https://github.com/lando/mssql/releases/tag/v0.8.0)
   * Removed bundle-dependencies and version-bump-prompt from plugin.
   * Updated package to use prepare-release-action.
