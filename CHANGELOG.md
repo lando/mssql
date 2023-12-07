@@ -1,3 +1,6 @@
+## v1.0.0 - [December 7, 2023](https://github.com/lando/mssql/releases/tag/v1.0.0)
+    * Dialed fully for `lando update`
+
 ## v0.9.0 - [October 20, 2023](https://github.com/lando/mssql/releases/tag/v0.9.0)
 * Added a new healthcheck that better assesses service readiness. [#23](https://github.com/lando/mssql/pull/23)
 * Restructured to use builders/postgres.js.
