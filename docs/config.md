@@ -71,6 +71,19 @@ services:
 lando destroy -y && lando start
 ```
 
+::: warning
+By default, most Lando recipes set their default database credentials to the name of the recipe (ex: [`@lando/symfony`](https://github.com/lando/symfony) sets the database password to `symfony`). Since MSSQL requires an 8+ character password with special characters, if you are overriding the default database service on a recipe you will need to provide a different password:
+
+```
+name: symfony_mssql
+recipe: symfony
+services:
+  database:
+    creds:
+      password: L4ndoSymfony! #needs to be 8 characters minimum with special characters
+```
+:::
+
 ## Getting information
 
 You can get connection and credential information about your mssql instance by running [`lando info`](https://docs.lando.dev/cli/info.html). It may also be worth checking out our [accessing services externally guide](https://docs.lando.dev/guides/external-access.html).
