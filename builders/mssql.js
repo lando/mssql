@@ -40,6 +40,9 @@ module.exports = {
           PATH: options.path.join(':'),
           SA_PASSWORD: options.creds.password,
         },
+        volumes: [
+          `${options.data}:/var/opt/data`,
+        ],
       };
       // Send it downstream
       super(id, options, {services: _.set({}, options.name, mssql)});
