@@ -8,7 +8,7 @@ module.exports = {
   name: 'mssql',
   config: {
     version: '2017-latest',
-    supported: ['2017-latest', '2019-latest'],
+    supported: ['2017-latest', '2019-latest', '2022-latest'],
     creds: {
       user: 'sa',
       password: 'he11oTHERE',
