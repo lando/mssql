@@ -1,5 +1,10 @@
+## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
+
+* Updated to add support for SQL Server 2022. [#34](https://github.com/lando/mssql/issues/34)
+
 ## v1.1.0 - [March 8, 2024](https://github.com/lando/mssql/releases/tag/v1.1.0)
-  * Updated to latest database services.
+
+* Updated to latest database services.
 
 ## v1.0.0 - [December 7, 2023](https://github.com/lando/mssql/releases/tag/v1.0.0)
 

@@ -18,7 +18,8 @@ services:
 
 ## Supported versions
 
-*   [2019-latest](https://hub.docker.com/_/microsoft-mssql-server)
+* [2022-latest](https://hub.docker.com/_/microsoft-mssql-server)  
+* [2019-latest](https://hub.docker.com/_/microsoft-mssql-server)
 *   **[2017-latest](https://hub.docker.com/_/microsoft-mssql-server)** **(default)**
 *   [custom](https://docs.lando.dev/core/v3/lando-service.html#overrides)
 
