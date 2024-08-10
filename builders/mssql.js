@@ -21,6 +21,7 @@ module.exports = {
       '/sbin',
       '/bin',
       '/opt/mssql-tools/bin',
+      '/opt/mssql-tools18/bin',
     ],
     port: '1433',
   },
