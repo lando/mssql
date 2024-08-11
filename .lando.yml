@@ -1,7 +1,9 @@
 name: lando-mssql-plugin
 services:
   node:
-    type: node:18
+    type: lando
+    services:
+      image: node:18
     build:
       - npm install
     scanner: false
