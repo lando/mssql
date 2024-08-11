@@ -1,6 +1,6 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
-* Bugfix to address upstream changes to `sqlcmd` path and options causing healthcheck to fail. [#35](https://github.com/lando/mssql/issues/35)
+* Bugfix to address upstream changes to `sqlcmd` path and options causing healthcheck to fail. [#37](https://github.com/lando/mssql/pull/37)
 
 ## v1.2.0 - [July 1, 2024](https://github.com/lando/mssql/releases/tag/v1.2.0)
 
