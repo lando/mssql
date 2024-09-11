@@ -18,9 +18,9 @@ services:
 
 ## Supported versions
 
-* [2022-latest](https://hub.docker.com/_/microsoft-mssql-server)  
-* [2019-latest](https://hub.docker.com/_/microsoft-mssql-server)
-*   **[2017-latest](https://hub.docker.com/_/microsoft-mssql-server)** **(default)**
+* [2022-latest](https://hub.docker.com/r/microsoft/mssql-server)
+* [2019-latest](https://hub.docker.com/r/microsoft/mssql-server)
+*   **[2017-latest](https://hub.docker.com/r/microsoft/mssql-server)** **(default)**
 *   [custom](https://docs.lando.dev/core/v3/services/lando.html#overrides)
 
 ::: warning ARM-Chip Macs Require Rosetta Emulation!
