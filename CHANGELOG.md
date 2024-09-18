@@ -1,5 +1,7 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
+## v1.3.0 - [September 18, 2024](https://github.com/lando/mssql/releases/tag/v1.3.0)
+
 * Bugfix to address upstream changes to `sqlcmd` path and options causing healthcheck to fail. [#37](https://github.com/lando/mssql/pull/37)
 
 ## v1.2.0 - [July 1, 2024](https://github.com/lando/mssql/releases/tag/v1.2.0)
