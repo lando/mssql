@@ -23,7 +23,7 @@ Run the following commands to validate things are rolling as they should.
 
 ```bash
 # Should be able to connect
-lando ssh -s defaults -c "sqlcmd -U sa -H database -P he11oTHERE -Q quit"
+lando ssh -s defaults -c "sqlcmd -U sa -H database -P he11oTHERE -Q quit -C"
 ```
 
 Destroy tests
