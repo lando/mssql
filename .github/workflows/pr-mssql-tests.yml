@@ -14,6 +14,7 @@ jobs:
         leia-test:
           - examples/2017
           - examples/2019
+          - examples/2022
         lando-version:
           - 3-edge-slim
         os:

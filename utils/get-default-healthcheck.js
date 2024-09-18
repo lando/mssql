@@ -8,5 +8,6 @@ module.exports = options => {
     `-H ${options.name}`,
     `-P ${options.creds.password}`,
     `-Q quit`,
+    `-C`,
   ].join(' ');
 };
